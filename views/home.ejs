@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') -%>
+<h1>Home</h1>
+<br>
+<p><%=hometxt%></p>
+<br>
+<%for(var i=0;i<datafrompost.length;++i){%>
+
+ <h1><%=datafrompost[i].title%></h1>
+ <p><%=datafrompost[i].body.substring(0,100)+" ..."%>
+<a href="/post/<%=datafrompost[i].title%>">Read More</a>
+</p> 
+
+ <%}%>
+<%- include('partials/footer.ejs') -%>
+
